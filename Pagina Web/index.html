@@ -1,19 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Primera Página Web</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESSENTIALS — Básicos</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="card">
-        <h1>¡Bienvenido a mi sitio!</h1>
-        <p>Primer pagina web</p>
-        <button id="btnSaludo">Haz clic aquí</button>
-        <p id="mensaje"></p>
+
+  <header>
+    <div class="logo">ESSENTIALS</div>
+    <button id="cart-btn">Carrito (<span id="cart-count">0</span>)</button>
+  </header>
+
+  <section class="hero">
+    <h1>Menos piezas. Infinitas combinaciones.</h1>
+    <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=800" alt="Hero Portada">
+  </section>
+
+  <main class="grid">
+    <div class="card" data-name="Camiseta Algodón" data-price="35.00">
+      <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500" alt="Camiseta">
+      <h3>Camiseta Algodón</h3>
+      <p>$35.990</p>
+      <button class="add-btn">Agregar</button>
     </div>
 
-    <script src="script.js"></script>
+    <div class="card" data-name="Jean Recto" data-price="75.00">
+      <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=500" alt="Jean">
+      <h3>Jean Recto</h3>
+      <p>$75.990</p>
+      <button class="add-btn">Agregar</button>
+    </div>
+
+    <div class="card" data-name="Sobrecamisa Verde" data-price="89.00">
+      <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=500" alt="Sobrecamisa">
+      <h3>Sobrecamisa Verde</h3>
+      <p>$89.990</p>
+      <button class="add-btn">Agregar</button>
+    </div>
+  </main>
+
+  <!-- Panel Desplegable del Carrito -->
+  <aside id="cart-drawer" class="cart-drawer">
+    <div class="cart-header">
+      <h3>Tu Carrito</h3>
+      <button id="close-cart">&times;</button>
+    </div>
+    <div id="cart-items" class="cart-items">
+      <p class="empty-msg">El carrito está vacío</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">Total: $<span id="cart-total">0.00</span></div>
+      <button class="checkout-btn">Finalizar Compra</button>
+    </div>
+  </aside>
+
+  <footer>
+    <p>2026 ESSENTIALS</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
