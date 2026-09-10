@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESSENTIALS — Registro de Usuario</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Encabezado y Navegación Global -->
+  <header>
+    <div class="logo">ESSENTIALS</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="productos.html">Productos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <div class="auth-cart">
+      <a href="login.html">Iniciar sesión</a> | 
+      <a href="registro.html">Registrar usuario</a>
+      <button id="cart-btn">Carrito (<span id="cart-count">0</span>)</button>
+    </div>
+  </header>
+
+  <main class="form-container">
+    <h2>Registro de Usuario</h2>
+    <form id="form-registro" novalidate>
+      
+      <div class="form-group">
+        <label for="run">RUN (Sin puntos ni guión, ej: 19011022K):</label>
+        <input type="text" id="run" name="run" placeholder="19011022K" required>
+        <span class="error-msg" id="error-run"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        <span class="error-msg" id="error-nombre"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="usuario@duoc.cl" required>
+        <span class="error-msg" id="error-email"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Contraseña (4 a 10 caracteres):</label>
+        <input type="password" id="password" name="password" required>
+        <span class="error-msg" id="error-password"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" placeholder="Av. Siempre Viva 123" required>
+        <span class="error-msg" id="error-direccion"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="region">Región:</label>
+        <select id="region" name="region" required>
+          <option value="">-- Selecciona una Región --</option>
+        </select>
+        <span class="error-msg" id="error-region"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="comuna">Comuna:</label>
+        <select id="comuna" name="comuna" disabled required>
+          <option value="">-- Selecciona primero una Región --</option>
+        </select>
+        <span class="error-msg" id="error-comuna"></span>
+      </div>
+
+      <button type="submit" class="btn-primary">Registrarse</button>
+    </form>
+  </main>
+
+  <!-- Panel Desplegable del Carrito -->
+  <aside id="cart-drawer" class="cart-drawer">
+    <div class="cart-header">
+      <h3>Tu Carrito</h3>
+      <button id="close-cart">&times;</button>
+    </div>
+    <div id="cart-items" class="cart-items">
+      <p class="empty-msg">El carrito está vacío</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">Total: $<span id="cart-total">0.00</span></div>
+      <button class="checkout-btn">Finalizar Compra</button>
+    </div>
+  </aside>
+
+  <footer>
+    <p>2026 ESSENTIALS</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

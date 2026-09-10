@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESSENTIALS — Detalle del Producto</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Encabezado y Navegación Global -->
+  <header>
+    <div class="logo">ESSENTIALS</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="productos.html">Productos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <div class="auth-cart">
+      <a href="login.html">Iniciar sesión</a> | 
+      <a href="registro.html">Registrar usuario</a>
+      <button id="cart-btn">Carrito (<span id="cart-count">0</span>)</button>
+    </div>
+  </header>
+
+  <main class="detail-container">
+    <!-- Migas de Pan (Breadcrumbs) -->
+    <nav class="breadcrumbs">
+      <a href="index.html">Home</a> &gt; <a href="productos.html">Productos</a> &gt; <span id="product-title-crumb">Detalle</span>
+    </nav>
+
+    <section class="product-detail">
+      <!-- Galería de imágenes -->
+      <div class="product-gallery">
+        <div class="main-image">
+          <img id="detail-img" src="https://via.placeholder.com/400" alt="Producto">
+        </div>
+        <div class="thumbnails">
+          <img src="https://via.placeholder.com/80" alt="Vista 1">
+          <img src="https://via.placeholder.com/80" alt="Vista 2">
+          <img src="https://via.placeholder.com/80" alt="Vista 3">
+        </div>
+      </div>
+
+      <!-- Información del producto -->
+      <div class="product-info">
+        <h1 id="detail-name">Nombre del Producto</h1>
+        <p class="price" id="detail-price">$0</p>
+        <p class="description" id="detail-description">
+          Descripción del producto seleccionada. Aquí se mostrarán los detalles completos.
+        </p>
+
+        <div class="purchase-action">
+          <label for="quantity">Cantidad:</label>
+          <input type="number" id="quantity" value="1" min="1">
+          <button id="add-to-cart-btn" class="btn-primary">Añadir al carrito</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Productos Relacionados -->
+    <section class="related-products">
+      <h3>Productos Relacionados</h3>
+      <div class="grid" id="related-grid">
+        <!-- Se cargarán con JS -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Panel Desplegable del Carrito -->
+  <aside id="cart-drawer" class="cart-drawer">
+    <div class="cart-header">
+      <h3>Tu Carrito</h3>
+      <button id="close-cart">&times;</button>
+    </div>
+    <div id="cart-items" class="cart-items">
+      <p class="empty-msg">El carrito está vacío</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">Total: $<span id="cart-total">0.00</span></div>
+      <button class="checkout-btn">Finalizar Compra</button>
+    </div>
+  </aside>
+
+  <footer>
+    <p>© 2026 ESSENTIALS — Tienda Minimalista</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
