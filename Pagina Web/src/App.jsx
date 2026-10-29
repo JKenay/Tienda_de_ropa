@@ -73,7 +73,9 @@ export default function App() {
       />
       
       <main className="container my-4 flex-grow-1">
-        {vistaActual === 'home' && <Catalogo productos={productos} onAgregar={agregarAlCarrito} />}
+        {(vistaActual === 'home' || vistaActual === 'catalogo') && (
+          <Catalogo productos={productos} onAgregar={agregarAlCarrito} />
+        )}
         {vistaActual === 'blog' && <Blog />}
         {vistaActual === 'nosotros' && <Nosotros />}
         {vistaActual === 'login' && <Login onLoginExitoso={handleLoginExitoso} setVistaActual={setVistaActual} />}
